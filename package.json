@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Este es el backend de la API para bucket listing",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon src/index.js"
   },
   "author": "",
   "license": "ISC",
