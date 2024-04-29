@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import cathingoryRoutes from "./routes/cathingory.routes.js";
+impo
 
 const app = express()
 
