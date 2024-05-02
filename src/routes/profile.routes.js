@@ -52,7 +52,7 @@ router.get("/api/perfil/:id", async(req, res) => {
         })
     })
 
-    main.mutuals = mutuals.length
+    main.mutuals = mutuals
 
 
     res.json(main)
