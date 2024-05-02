@@ -15,12 +15,23 @@ router.get("/api/feed", async(req, res) => {
             "JOIN thingos AS th ON pv.thingo_id = th.id\n" +
             "JOIN profile AS other ON pv.profile_id = other.id\n" +
             `WHERE (pv.thingo_id = ${result.id_thingo}) AND (pv.profile_id = ${user})
-` +
+            ` +
             "ORDER BY pv.last_done_date;")
         result.hecho_por_usuario = donebyyou.length === 1
     }
 
     res.json(results)
+})
+
+router.get("/api/trending", async(req, res) => {
+    const [trending] = await pool.query("SELECT pv.thingo_id, th.name, cat.name, cat.image, COUNT(react.id) AS puntos_de_insanidad FROM pivot_thingos_perfil as pv\n" +
+        "JOIN thingos AS th ON pv.thingo_id = th.id\n" +
+        "JOIN cathingory AS cat ON th.cathingory_id = cat.id\n" +
+        "LEFT JOIN reacthingos AS react ON (react.pivot_id = pv.id) AND (react.reaction_type = 'queloco')\n" +
+        "WHERE pv.last_done_date >= CURRENT_DATE - INTERVAL '7' DAY\n" +
+        "GROUP BY pv.id\n" +
+        "ORDER BY COUNT(react.id) DESC;")
+    res.json(trending)
 })
 
 export default router
