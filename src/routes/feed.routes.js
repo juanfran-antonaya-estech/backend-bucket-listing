@@ -7,7 +7,7 @@ router.get("/api/feed", async (req, res) => {
 
     const {session_id} = req.headers
     if(session_id == undefined){
-        res.status(405).json({
+        res.status(401).json({
             "message" : "no me vale eso"
         })
         return
@@ -46,6 +46,76 @@ router.get("/api/trending", async (req, res) => {
         "        GROUP BY th.id\n" +
         "        ORDER BY COUNT(react.id) DESC;")
     res.json(trending)
+})
+
+router.get("/api/feed/friendsuggestions", async (req,res) => {
+    const {session_id} = req.headers
+    const [session_key] = await pool.query("SELECT pf.id, pv.session_id FROM profile AS pf\n" +
+        "JOIN usuario AS lg ON pf.user_id = lg.id\n" +
+        "JOIN pivot_login_user AS pv ON pv.user_id = lg.id\n" +
+        `WHERE pv.session_id = '${session_id}';`)
+    const user = session_key[0].id
+
+    const [followers] = await pool.query("SELECT fwers.id, fwers.apodo, fwers.profile_photo FROM profile AS fwers\n" +
+        "JOIN follows AS fwpv ON fwers.id = fwpv.following_user_id\n" +
+        `WHERE fwpv.followed_user_id = ${user}`)
+
+    const [follows] = await pool.query("SELECT fwers.id, fwers.apodo, fwers.profile_photo FROM profile AS fwers\n" +
+        "JOIN follows AS fwpv ON fwers.id = fwpv.followed_user_id\n" +
+        `WHERE fwpv.following_user_id = ${user}`)
+
+    const mutuals = []
+    followers.map( follower => {
+        follows.map( followed => {
+            if (follower.id = followed.id) {
+                mutuals.push(follower)
+            }
+        })
+    })
+
+    const otrosmutuals = []
+
+    for (const mutual of mutuals) {
+        const [otrosfollowers] = await pool.query("SELECT fwers.id, fwers.apodo, fwers.profile_photo FROM profile AS fwers\n" +
+            "JOIN follows AS fwpv ON fwers.id = fwpv.following_user_id\n" +
+            `WHERE fwpv.followed_user_id = ${mutual.id}`)
+
+        const [otrosfollows] = await pool.query("SELECT fwers.id, fwers.apodo, fwers.profile_photo FROM profile AS fwers\n" +
+            "JOIN follows AS fwpv ON fwers.id = fwpv.followed_user_id\n" +
+            `WHERE fwpv.following_user_id = ${mutual.id}`)
+
+        otrosfollowers.map( follower => {
+            otrosfollows.map( followed => {
+                if (follower.id = followed.id) {
+                    otrosmutuals.push(follower)
+                }
+            })
+        })
+    }
+
+    otrosmutuals.map(otromutual => {
+        function checkifexists() {
+            let exists = false
+
+            mutuals.forEach(mutual => {
+                if(mutual.id == otromutual.id) {
+                    exists = true
+                }
+            })
+
+            return exists;
+        }
+
+        if (user == otromutual.id) {
+            otromutual.relacion = "you"
+        } else if (checkifexists()) {
+            otromutual.relacion = "amigo"
+        } else {
+            otromutual.relacion = "ninguna"
+        }
+    })
+
+    res.json(otrosmutuals)
 })
 
 export default router
