@@ -1,0 +1,8 @@
+Para obtener la session id, pega esto en tu función:
+
+const {session_id} = req.headers
+    const [session_key] = await pool.query("SELECT pf.id, pv.session_id FROM profile AS pf\n" +
+        "JOIN usuario AS lg ON pf.user_id = lg.id\n" +
+        "JOIN pivot_login_user AS pv ON pv.user_id = lg.id\n" +
+        `WHERE pv.session_id = '${session_id}';`)
+    const user = session_key[0].id
