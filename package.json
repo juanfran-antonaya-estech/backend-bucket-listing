@@ -1,19 +1,6 @@
 {
-  "name": "backend-bucket-listing",
-  "version": "1.0.0",
-  "description": "Este es el backend de la API para bucket listing",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "dev": "nodemon src/index.js"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "json": "^11.0.0",
-    "mysql2": "^3.9.7",
-    "nodemon": "^3.1.0"
+    "express": "^4.19.2"
   }
 }
