@@ -1,9 +1,21 @@
 {
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mysql2": "^3.9.7"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
-  }
+  },
+  "name": "backend-bucket-listing",
+  "description": "- La URL base es ``http://localhost:3000/api/`` ## Endpoints ### Cathingory - ``GET /api/cathingory``: obtiene todas las categorías<br> - ``GET /api/cathingory/{nombre}``: obtiene todas las categorías cuyo nombre coincide con ``name`` >``` >{ >  \"id\": int, >  \"name\": \"nombre\", >  \"description\": \"descripcion\", >  \"image\": \"URL de la imagen\" >}",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
