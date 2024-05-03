@@ -3,7 +3,17 @@ import {pool} from "../db.js";
 
 const router = Router()
 
-router.get("/api/feed", async (req, res) => {
+router.get("/api/feed/:page", async (req, res) => {
+
+    const main = {
+        info: {
+            count: 0,
+            pages: 0,
+            next: null,
+            prev: null
+        },
+        results: []
+    }
 
     const {session_id} = req.headers
     if(session_id == undefined){
@@ -12,6 +22,11 @@ router.get("/api/feed", async (req, res) => {
         })
         return
     }
+
+    const pagina = req.params.page
+    const limit = 10
+    const offset = (pagina - 1) * limit
+
     const [session_key] = await pool.query("SELECT pf.id, pv.session_id FROM profile AS pf\n" +
         "JOIN usuario AS lg ON pf.user_id = lg.id\n" +
         "JOIN pivot_login_user AS pv ON pv.user_id = lg.id\n" +
@@ -22,7 +37,24 @@ router.get("/api/feed", async (req, res) => {
     const [results] = await pool.query("SELECT pv.thingo_id AS id_thingo, pv.profile_id AS id_de_quien_lo_ha_hecho, th.name AS nombre_thingo, other.apodo AS nombre_de_quien_lo_ha_hecho, pv.last_done_date AS fecha_hecho_por_otro FROM pivot_thingos_perfil AS pv\n" +
         "JOIN thingos AS th ON pv.thingo_id = th.id\n" +
         "JOIN profile AS other ON pv.profile_id = other.id\n" +
-        "ORDER BY pv.last_done_date;")
+        "ORDER BY pv.last_done_date\n" +
+        `LIMIT ${limit} OFFSET ${offset}`)
+
+    const [resultInfo] = await pool.query("SELECT pv.thingo_id AS id_thingo, pv.profile_id AS id_de_quien_lo_ha_hecho, th.name AS nombre_thingo, other.apodo AS nombre_de_quien_lo_ha_hecho, pv.last_done_date AS fecha_hecho_por_otro FROM pivot_thingos_perfil AS pv\n" +
+        "JOIN thingos AS th ON pv.thingo_id = th.id\n" +
+        "JOIN profile AS other ON pv.profile_id = other.id\n" +
+        "ORDER BY pv.last_done_date")
+
+    main.info.count = resultInfo.length
+    main.info.pages = Math.floor((resultInfo.length / limit) + 1)
+    main.info.next = `/api/feed/${Math.floor(pagina) + 1}`
+    main.info.prev = `/api/feed/${Math.floor(pagina) - 1}`
+    if (pagina == 1) {
+        main.info.prev = null
+    }
+    if (pagina == main.info.pages) {
+        main.info.next = null
+    }
 
     for (const result of results) {
         const [donebyyou] = await pool.query("SELECT pv.thingo_id AS id_thingo, pv.profile_id AS done_by_you FROM pivot_thingos_perfil AS pv\n" +
@@ -34,7 +66,9 @@ router.get("/api/feed", async (req, res) => {
         result.hecho_por_usuario = donebyyou.length === 1
     }
 
-    res.json(results)
+    main.results = results
+
+    res.json(main)
 })
 
 router.get("/api/trending", async (req, res) => {
@@ -48,7 +82,7 @@ router.get("/api/trending", async (req, res) => {
     res.json(trending)
 })
 
-router.get("/api/feed/friendsuggestions", async (req,res) => {
+router.get("/api/suggestions/friendsuggestions", async (req,res) => {
     const {session_id} = req.headers
     if(session_id == undefined){
         res.status(401).json({
@@ -124,7 +158,7 @@ router.get("/api/feed/friendsuggestions", async (req,res) => {
     res.json(otrosmutuals)
 })
 
-router.get("/api/feed/sugerenciasthingos", async (req, res) => {
+router.get("/api/suggestions/sugerenciasthingos", async (req, res) => {
     const [sugerenciasthingos] = await pool.query("SELECT pv.thingo_id, th.name AS nombre_thingo, cat.name AS nombre_categoria_thingo, cat.image AS imagen_categoria_thingo, other.apodo AS nombre_de_quien_lo_ha_hecho, pv.first_completion_date AS fecha_cuando_se_hizo FROM pivot_thingos_perfil AS pv\n" +
         "JOIN thingos AS th ON pv.thingo_id = th.id\n" +
         "JOIN cathingory AS cat ON th.cathingory_id = cat.id\n" +
@@ -133,7 +167,7 @@ router.get("/api/feed/sugerenciasthingos", async (req, res) => {
     res.json(sugerenciasthingos)
 })
 
-router.get("/api/feed/thingosusuario/:page/:id", async (req, res) => {
+router.get("/api/thingos/thingosusuario/:page/:id", async (req, res) => {
     const main = {};
     const [info] = await pool.query("SELECT pv.thingo_id, th.name AS nombre_thingo, cat.name AS nombre_categoria, cat.image AS imagen_categoria_thingo, other.apodo AS nombre_de_quien_lo_ha_hecho\n" +
         "FROM pivot_thingos_perfil AS pv\n" +
@@ -160,11 +194,11 @@ router.get("/api/feed/thingosusuario/:page/:id", async (req, res) => {
         "        JOIN thingos AS th ON pv.thingo_id = th.id\n" +
         "        JOIN cathingory AS cat ON th.cathingory_id = cat.id\n" +
         "        JOIN profile AS other ON pv.profile_id = other.id\n" +
-        "        JOIN pivot_thingos_perfil AS pv ON pv.profile_id = pv.id\n" +
-        "        WHERE 1 LIMIT 10 OFFSET ${(pagina - 1) * 10}");
-    res.json(results)
+        "        JOIN pivot_thingos_perfil AS pivo ON pivo.profile_id = pv.id\n" +
+        `       WHERE 1 LIMIT 10 OFFSET ${(pagina - 1) * 10}`);
 
     main.results = results
+    res.json(results)
 
 })
 
