@@ -49,22 +49,22 @@ router.get("/api/trending", async (req, res) => {
 })
 
 router.get("/api/feed/sugerenciasthingos", async (req, res) => {
-    const [sugerenciasthingos] = await pool.query("SELECT pv.thingo_id, th.name AS nombre_thingo, cat.name AS nombre_categoria_thingo, cat.image AS imagen_categoria_thingo, other.apodo AS nombre_de_quien_lo_ha_hecho, pv.first_completion_date AS fecha_cuando_se_hizo FROM pivot_thingos_perfil as pv \n" +
-        "        JOIN thingos AS th ON pv.thingo_id = th.id\n" +
-        "        JOIN cathingory AS cat ON th.cathingory_id = cat.id\n" +
-        "        JOIN profile AS other ON pv.profile_id = other.id\n" +
-        "        JOIN pivot_thingos_perfil AS pv ON pv.profile_id = pv.id\n" +
-        "        GROUP BY th.id")
+    const [sugerenciasthingos] = await pool.query("SELECT pv.thingo_id, th.name AS nombre_thingo, cat.name AS nombre_categoria_thingo, cat.image AS imagen_categoria_thingo, other.apodo AS nombre_de_quien_lo_ha_hecho, pv.first_completion_date AS fecha_cuando_se_hizo FROM pivot_thingos_perfil AS pv\n" +
+        "JOIN thingos AS th ON pv.thingo_id = th.id\n" +
+        "JOIN cathingory AS cat ON th.cathingory_id = cat.id\n" +
+        "JOIN profile AS other ON pv.profile_id = other.id\n" +
+        "GROUP BY th.id;")
     res.json(sugerenciasthingos)
 })
 
 router.get("/api/feed/thingosusuario/:page/:id", async (req, res) => {
     const main = {}
-    const [info] = await pool.query("SELECT pv.thingo_id, th.name AS nombre_thingo, cat.name AS nombre_categoria, cat.image AS imagen_categoria_thingo, other.apodo AS hecho? FROM pivot_thingos_perfil as pv \n" +
-        "        JOIN thingos AS th ON pv.thingo_id = th.id\n" +
-        "        JOIN cathingory AS cat ON th.cathingory_id = cat.id\n" +
-        "        JOIN profile AS other ON pv.profile_id = other.id\n" +
-        "        JOIN pivot_thingos_perfil AS pv ON pv.profile_id = pv.id\n")
+    const [info] = await pool.query("SELECT pv.thingo_id, th.name AS nombre_thingo, cat.name AS nombre_categoria, cat.image AS imagen_categoria_thingo, other.apodo AS nombre_de_quien_lo_ha_hecho\n" +
+        "FROM pivot_thingos_perfil AS pv\n" +
+        "JOIN thingos AS th ON pv.thingo_id = th.id\n" +
+        "JOIN cathingory AS cat ON th.cathingory_id = cat.id\n" +
+        "JOIN profile AS other ON pv.profile_id = other.id;")
+
     main.info.count = info.length
     main.info.pages = info.length / 10
 
