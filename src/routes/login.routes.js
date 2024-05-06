@@ -24,7 +24,20 @@ router.post("/api/login", async(req,res) => {
     const { usuario, password, device_ip } = req.body
     const concat = usuario + password + device_ip
 
-    const [existence] = await pool.query("")
+    const [existence] = await pool.query("SELECT * FROM `pivot_login_user` WHERE `session_id` = ?",[concat.hashCode()])
+    if (existence.length != 0) {
+        main.message = "success"
+        main.session_id = concat.hashCode()
+
+        const [profcreated] = await pool.query("SELECT * FROM `profile` WHERE user_id = ?;", [existence[0].user_id])
+        if (profcreated.length == 0) {
+            main.next_page = "createprofile"
+        } else {
+            main.next_page = "feed"
+        }
+        res.status(200).json(main)
+        return
+    }
 
     const [result] = await pool.query("SELECT id, usuario AS user, pass FROM `usuario` WHERE usuario.usuario = ?;", usuario)
     if(result.length == 0){
