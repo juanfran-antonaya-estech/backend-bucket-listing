@@ -4,6 +4,9 @@ import cathingoryRoutes from "./routes/cathingory.routes.js";
 import profileRoutes from "./routes/profile.routes.js";
 import feedRoutes from "./routes/feed.routes.js";
 import loginRoutes from "./routes/login.routes.js";
+import suggestionsRoutes from "./routes/suggestions.routes.js";
+import thingosRoutes from "./routes/thingos.routes.js";
+import trendingRoutes from "./routes/trending.routes.js";
 
 const app = express()
 
@@ -13,5 +16,8 @@ app.use(cathingoryRoutes)
 app.use(profileRoutes)
 app.use(feedRoutes)
 app.use(loginRoutes)
+app.use(suggestionsRoutes)
+app.use(thingosRoutes)
+app.use(trendingRoutes)
 
 app.listen(3000)
