@@ -84,6 +84,7 @@ router.get("/api/feed/thingosusuario/:page/:id", async (req, res) => {
         info,
         results
     });
+    return
 
     main.info = {
         count: info.length,
