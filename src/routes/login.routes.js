@@ -73,6 +73,26 @@ router.post("/api/login", async(req,res) => {
 
 })
 
+router.post("/api/register", async (req,res) => {
+    const [existing_users] = await pool.query("SELECT usuario FROM usuario")
+    const {user, pass, email} = req.body
+
+    let exist = false
+    existing_users.forEach(euser => {
+        if (euser.usuario === user){
+            exist = true
+        }
+    })
+    if (exist){
+        res.status(404).send({"message": "usuario ya existe"})
+    } else {
+        const [creationresult] = await pool.query("INSERT INTO `usuario` (`id`, `usuario`, `pass`, `email`) VALUES (NULL, ?, ?, ?)", [user,pass,email])
+        res.status(200).json({"message":"usuario creado"})
+    }
+
+
+})
+
 
 
 export default router

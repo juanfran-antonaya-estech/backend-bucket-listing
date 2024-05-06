@@ -3,7 +3,7 @@ import Router from "express";
 
 const router = Router()
 
-router.get("/api/feed/thingosusuario/:page/:id", async (req, res) => {
+router.get("/api/thingos/:page/:id", async (req, res) => {
     const main = {};
     const [info] = await pool.query("SELECT pv.thingo_id, th.name AS nombre_thingo, cat.name AS nombre_categoria, cat.image AS imagen_categoria_thingo, other.apodo AS nombre_de_quien_lo_ha_hecho\n" +
         "FROM pivot_thingos_perfil AS pv\n" +

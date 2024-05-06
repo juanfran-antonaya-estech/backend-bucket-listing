@@ -31,6 +31,10 @@ router.get("/api/feed/:page", async (req, res) => {
         "JOIN usuario AS lg ON pf.user_id = lg.id\n" +
         "JOIN pivot_login_user AS pv ON pv.user_id = lg.id\n" +
         `WHERE pv.session_id = '${session_id}';`)
+    if (session_key.length == 0){
+        res.status(401).json({"message": "perfil no creado"})
+        return
+    }
     const user = session_key[0].id
 
 
