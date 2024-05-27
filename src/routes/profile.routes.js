@@ -127,4 +127,76 @@ router.get("/api/perfil/:id", async(req, res) => {
     res.json(main)
 })
 
+router.post("/api/perfil", async(req, res) => {
+    const {session_id} = req.headers
+    if (session_id == undefined || session_id == null) {
+        res.status(401).json({
+            "message" : "session_key no definida"
+        })
+        return
+    }
+    const [session_key] = await pool.query("SELECT us.id, pv.session_id FROM `usuario` AS us\n" +
+        "JOIN pivot_login_user as pv ON us.id = pv.user_id\n" +
+        `WHERE pv.session_id = '${session_id}';`)
+    const user = session_key[0].id
+
+    const [results] = await pool.query(`SELECT * FROM profile WHERE user_id = ${user}`)
+    if (results.length != 0){
+        res.status(405).json({
+            "message": "perfil ya creado"
+        })
+        return
+    }
+
+    let {apodo, profile_photo, profile_banner, profile_bio, minor, enterprise, ni_user} = req.body
+
+        if (enterprise){
+            enterprise = 1
+        } else {
+            enterprise = 0
+        }
+        if (minor){
+            minor = 1
+        } else {
+            minor = 0
+        }
+
+        if (ni_user != null){
+            ni_user = "'" + ni_user + "'"
+        }
+
+    let [result] = await pool.query("INSERT INTO `profile`(\n" +
+        "    `id`,\n" +
+        "    `user_id`,\n" +
+        "    `apodo`,\n" +
+        "    `profile_photo`,\n" +
+        "    `profile_banner`,\n" +
+        "    `profile_bio`,\n" +
+        "    `fecha_creacion`,\n" +
+        "    `minor`,\n" +
+        "    `enterprise`,\n" +
+        "    `netflix_impact_user`\n" +
+        ")\n" +
+        "VALUES(\n" +
+        "    NULL,\n" +
+        `    '${user}',
+` +
+        `    '${apodo}',
+` +
+        `    '${profile_photo}',
+` +
+        `    '${profile_banner}',
+` +
+        `    '${profile_bio}',
+` +
+        "    CURRENT_DATE(),\n" +
+        `    '${minor}',
+` +
+        `    '${enterprise}',
+` +
+        `    ${ni_user});`)
+
+    res.json(result)
+})
+
 export default router

@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="16717849">
+        <description>
+            <![CDATA[Created after removal of "define-data-property <sup>[![Version Badge][npm-version-svg]][package-url]</sup>" from Instancia]]></description>
+        <accepts>define-data-property_README.html</accepts>
+    </rule>
+    <rule id="423b72d0">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>define-data-property_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="eb2ac53">
+        <description>Created after removal of "sqlstring" from Instancia</description>
+        <accepts>sqlstring_README.html</accepts>
+    </rule>
+    <rule id="2a2efc35">
+        <description>Created after removal of "2.3.3 / 2022-03-06" from Instancia</description>
+        <accepts>sqlstring_HISTORY.html</accepts>
+    </rule>
+    <rule id="36190c94">
+        <description>Created after removal of "named-placeholders" from Instancia</description>
+        <accepts>named-placeholders_README.html</accepts>
+    </rule>
+    <rule id="34b5e891">
+        <description>Created after removal of "lru-cache" from Instancia</description>
+        <accepts>node_modules_lru-cache_README.html</accepts>
+    </rule>
+    <rule id="117d20b">
+        <description>Created after removal of "destroy" from Instancia</description>
+        <accepts>destroy_README.html</accepts>
+    </rule>
+    <rule id="7ff5d995">
+        <description>
+            <![CDATA[Created after removal of "has-property-descriptors <sup>[![Version Badge][npm-version-svg]][package-url]</sup>" from Instancia]]></description>
+        <accepts>has-property-descriptors_README.html</accepts>
+    </rule>
+    <rule id="80ee064">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>has-property-descriptors_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="4e81572">
+        <description>Created after removal of "toidentifier" from Instancia</description>
+        <accepts>toidentifier_README.html</accepts>
+    </rule>
+    <rule id="5e3abe2a">
+        <description>Created after removal of "1.0.1 / 2021-11-14" from Instancia</description>
+        <accepts>toidentifier_HISTORY.html</accepts>
+    </rule>
+    <rule id="274c7ee">
+        <description>Created after removal of "content-type" from Instancia</description>
+        <accepts>content-type_README.html</accepts>
+    </rule>
+    <rule id="2eee6eba">
+        <description>Created after removal of "1.0.5 / 2023-01-29" from Instancia</description>
+        <accepts>content-type_HISTORY.html</accepts>
+    </rule>
+    <rule id="35574aec">
+        <description>
+            <![CDATA[Created after removal of "es-errors <sup>[![Version Badge][npm-version-svg]][package-url]</sup>" from Instancia]]></description>
+        <accepts>es-errors_README.html</accepts>
+    </rule>
+    <rule id="2ada8d88">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>es-errors_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="77005982">
+        <description>
+            <![CDATA[Created after removal of "has-proto <sup>[![Version Badge][npm-version-svg]][package-url]</sup>" from Instancia]]></description>
+        <accepts>has-proto_README.html</accepts>
+    </rule>
+    <rule id="41e36bc3">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>has-proto_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="73158b76">
+        <description>Created after removal of "MySQL2" from Instancia</description>
+        <accepts>mysql2_README.html</accepts>
+    </rule>
+    <rule id="20761dd8">
+        <description>
+            <![CDATA[Created after removal of "<node_modules_iconv-lite_README.md>" from Instancia]]></description>
+        <accepts>node_modules_iconv-lite_README.html</accepts>
+    </rule>
+    <rule id="35f709d5">
+        <description><![CDATA[Created after removal of "<iconv-lite_Changelog.md>" from Instancia]]></description>
+        <accepts>iconv-lite_Changelog.html</accepts>
+    </rule>
+    <rule id="75f8d223">
+        <description><![CDATA[Created after removal of "<caching_sha2_password.md>" from Instancia]]></description>
+        <accepts>caching_sha2_password.html</accepts>
+    </rule>
+    <rule id="12f8430c">
+        <description>Created after removal of "ms" from Instancia</description>
+        <accepts>ms_readme.html</accepts>
+    </rule>
+    <rule id="457087b4">
+        <description><![CDATA[Created after removal of "<license.md>" from Instancia]]></description>
+        <accepts>license.html</accepts>
+    </rule>
+    <rule id="7fe8c888">
+        <description>Created after removal of "content-disposition" from Instancia</description>
+        <accepts>content-disposition_README.html</accepts>
+    </rule>
+    <rule id="52e4dbe9">
+        <description>Created after removal of "0.5.4 / 2021-12-10" from Instancia</description>
+        <accepts>content-disposition_HISTORY.html</accepts>
+    </rule>
+    <rule id="17d5a34e">
+        <description>
+            <![CDATA[Created after removal of "call-bind <sup>[![Version Badge][npm-version-svg]][package-url]</sup>" from Instancia]]></description>
+        <accepts>call-bind_README.html</accepts>
+    </rule>
+    <rule id="3d6868e2">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>call-bind_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="33b1fb18">
+        <description>Created after removal of "Methods" from Instancia</description>
+        <accepts>methods_README.html</accepts>
+    </rule>
+    <rule id="2dbc4a3b">
+        <description>Created after removal of "1.1.2 / 2016-01-17" from Instancia</description>
+        <accepts>methods_HISTORY.html</accepts>
+    </rule>
+    <rule id="f547244">
+        <description>Created after removal of "lru-cache" from Instancia</description>
+        <accepts>lru-cache_README.html</accepts>
+    </rule>
+    <rule id="4aa4e976">
+        <description>Created after removal of "proxy-addr" from Instancia</description>
+        <accepts>proxy-addr_README.html</accepts>
+    </rule>
+    <rule id="250b2490">
+        <description>Created after removal of "2.0.7 / 2021-05-31" from Instancia</description>
+        <accepts>proxy-addr_HISTORY.html</accepts>
+    </rule>
+    <rule id="19bc32be">
+        <description>Created after removal of "depd" from Instancia</description>
+        <accepts>depd_Readme.html</accepts>
+    </rule>
+    <rule id="5251abdd">
+        <description>Created after removal of "2.0.0 / 2018-10-26" from Instancia</description>
+        <accepts>depd_History.html</accepts>
+    </rule>
+    <rule id="3c2e6fc3">
+        <description>Created after removal of "abbrev-js" from Instancia</description>
+        <accepts>abbrev_README.html</accepts>
+    </rule>
+    <rule id="620ba0c">
+        <description>Created after removal of "pstree.remy" from Instancia</description>
+        <accepts>pstree.remy_README.html</accepts>
+    </rule>
+    <rule id="72609832">
+        <description>Created after removal of "range-parser" from Instancia</description>
+        <accepts>range-parser_README.html</accepts>
+    </rule>
+    <rule id="53c39d1d">
+        <description>Created after removal of "1.2.1 / 2019-05-10" from Instancia</description>
+        <accepts>range-parser_HISTORY.html</accepts>
+    </rule>
+    <rule id="2bc1c9b">
+        <description>Created after removal of "balanced-match" from Instancia</description>
+        <accepts>balanced-match_README.html</accepts>
+    </rule>
+    <rule id="5300dd4e">
+        <description><![CDATA[Created after removal of "<LICENSE.md>" from Instancia]]></description>
+        <accepts>LICENSE.html</accepts>
+    </rule>
+    <rule id="428a0e9c">
+        <description>Created after removal of "Bytes utility" from Instancia</description>
+        <accepts>Readme.html</accepts>
+    </rule>
+    <rule id="647f9f02">
+        <description>Created after removal of "3.1.2 / 2022-01-27" from Instancia</description>
+        <accepts>History.html</accepts>
+    </rule>
+    <rule id="389edd6b">
+        <description>Created after removal of "node-touch" from Instancia</description>
+        <accepts>touch_README.html</accepts>
+    </rule>
+    <rule id="5e9ea864">
+        <description><![CDATA[Created after removal of "<express_Readme.md>" from Instancia]]></description>
+        <accepts>express_Readme.html</accepts>
+    </rule>
+    <rule id="ab0f5bb">
+        <description>Created after removal of "4.19.2 / 2024-03-25" from Instancia</description>
+        <accepts>express_History.html</accepts>
+    </rule>
+    <rule id="9c99e16">
+        <description>Created after removal of "encodeurl" from Instancia</description>
+        <accepts>encodeurl_README.html</accepts>
+    </rule>
+    <rule id="63e17601">
+        <description>Created after removal of "1.0.2 / 2018-01-21" from Instancia</description>
+        <accepts>encodeurl_HISTORY.html</accepts>
+    </rule>
+    <rule id="5565b701">
+        <description>Created after removal of "Merge Descriptors" from Instancia</description>
+        <accepts>merge-descriptors_README.html</accepts>
+    </rule>
+    <rule id="62de3e74">
+        <description>Created after removal of "1.0.1 / 2016-01-17" from Instancia</description>
+        <accepts>merge-descriptors_HISTORY.html</accepts>
+    </rule>
+    <rule id="430d48bf">
+        <description>Created after removal of "Array Flatten" from Instancia</description>
+        <accepts>array-flatten_README.html</accepts>
+    </rule>
+    <rule id="5473183d">
+        <description>Created after removal of ".makeRe star" from Instancia</description>
+        <accepts>picomatch_README.html</accepts>
+    </rule>
+    <rule id="398fb0c9">
+        <description>Created after removal of "Release history" from Instancia</description>
+        <accepts>picomatch_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="24afea4b">
+        <description>Created after removal of "safe-buffer [![travis][travis-image]][travis-url]
+            [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style
+            guide][standard-image]][standard-url]" from Instancia
+        </description>
+        <accepts>safe-buffer_README.html</accepts>
+    </rule>
+    <rule id="3c8c6fd5">
+        <description>
+            <![CDATA[Created after removal of "function-bind <sup>[![Version Badge][npm-version-svg]][package-url]</sup>" from Instancia]]></description>
+        <accepts>function-bind_README.html</accepts>
+    </rule>
+    <rule id="1c5aa1af">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>function-bind_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="6a14d86c">
+        <description>Created after removal of "Security" from Instancia</description>
+        <accepts>.github_SECURITY.html</accepts>
+    </rule>
+    <rule id="765984df">
+        <description>Created after removal of "is-glob [![NPM
+            version](https://img.shields.io/npm/v/is-glob.svg?style=flat)](https://www.npmjs.com/package/is-glob) [![NPM
+            monthly downloads](https://img.shields.io/npm/dm/is-glob.svg?style=flat)](https://npmjs.org/package/is-glob)
+            [![NPM total
+            downloads](https://img.shields.io/npm/dt/is-glob.svg?style=flat)](https://npmjs.org/package/is-glob)
+            [![Build
+            Status](https://img.shields.io/github/workflow/status/micromatch/is-glob/dev)](https://github.com/micromatch/is-glob/actions)"
+            from Instancia
+        </description>
+        <accepts>is-glob_README.html</accepts>
+    </rule>
+    <rule id="4872c12f">
+        <description>Created after removal of "EE First" from Instancia</description>
+        <accepts>ee-first_README.html</accepts>
+    </rule>
+    <rule id="7649ac91">
+        <description><![CDATA[Created after removal of "<inherits_README.md>" from Instancia]]></description>
+        <accepts>inherits_README.html</accepts>
+    </rule>
+    <rule id="1fb6da5a">
+        <description><![CDATA[Created after removal of "<iconv-lite_README.md>" from Instancia]]></description>
+        <accepts>iconv-lite_README.html</accepts>
+    </rule>
+    <rule id="20618000">
+        <description>Created after removal of "0.4.24 / 2018-08-22" from Instancia</description>
+        <accepts>Changelog.html</accepts>
+    </rule>
+    <rule id="79772971">
+        <description>Created after removal of "anymatch" from Instancia</description>
+        <accepts>anymatch_README.html</accepts>
+    </rule>
+    <rule id="b5a4a32">
+        <description>
+            <![CDATA[Created after removal of "es-define-property <sup>[![Version Badge][npm-version-svg]][package-url]</sup>" from Instancia]]></description>
+        <accepts>es-define-property_README.html</accepts>
+    </rule>
+    <rule id="4837bb3d">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>es-define-property_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="53624d27">
+        <description>Created after removal of "Chokidar [![Weekly
+            downloads](https://img.shields.io/npm/dw/chokidar.svg)](https://github.com/paulmillr/chokidar) [![Yearly
+            downloads](https://img.shields.io/npm/dy/chokidar.svg)](https://github.com/paulmillr/chokidar)" from
+            Instancia
+        </description>
+        <accepts>chokidar_README.html</accepts>
+    </rule>
+    <rule id="2d59225a">
+        <description>Created after removal of "fresh" from Instancia</description>
+        <accepts>fresh_README.html</accepts>
+    </rule>
+    <rule id="27fe925d">
+        <description>Created after removal of "0.5.2 / 2017-09-13" from Instancia</description>
+        <accepts>fresh_HISTORY.html</accepts>
+    </rule>
+    <rule id="6998eddf">
+        <description>
+            <![CDATA[Created after removal of "get-intrinsic <sup>[![Version Badge][npm-version-svg]][package-url]</sup>" from Instancia]]></description>
+        <accepts>get-intrinsic_README.html</accepts>
+    </rule>
+    <rule id="52d9368">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>get-intrinsic_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="470feb79">
+        <description>
+            <![CDATA[Created after removal of "qs <sup>[![Version Badge][npm-version-svg]][package-url]</sup>" from Instancia]]></description>
+        <accepts>qs_README.html</accepts>
+    </rule>
+    <rule id="3cd8ab11">
+        <description><![CDATA[Created after removal of "<qs_CHANGELOG.md>" from Instancia]]></description>
+        <accepts>qs_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="16101c7d">
+        <description><![CDATA[Created after removal of "<qs_LICENSE.md>" from Instancia]]></description>
+        <accepts>qs_LICENSE.html</accepts>
+    </rule>
+    <rule id="1afb3bbf">
+        <description>Created after removal of "seq-queue - queue to keep request process in sequence" from Instancia
+        </description>
+        <accepts>seq-queue_README.html</accepts>
+    </rule>
+    <rule id="2ba3d7ac">
+        <description>Created after removal of "is-binary-path [![Build
+            Status](https://travis-ci.org/sindresorhus/is-binary-path.svg?branch=master)](https://travis-ci.org/sindresorhus/is-binary-path)"
+            from Instancia
+        </description>
+        <accepts>is-binary-path_readme.html</accepts>
+    </rule>
+    <rule id="3e889e99">
+        <description>Created after removal of "Path-to-RegExp" from Instancia</description>
+        <accepts>path-to-regexp_Readme.html</accepts>
+    </rule>
+    <rule id="4236a928">
+        <description>Created after removal of "0.1.7 / 2015-07-28" from Instancia</description>
+        <accepts>path-to-regexp_History.html</accepts>
+    </rule>
+    <rule id="5f10e5ce">
+        <description>
+            <![CDATA[Created after removal of "hasown <sup>[![Version Badge][npm-version-svg]][package-url]</sup>" from Instancia]]></description>
+        <accepts>hasown_README.html</accepts>
+    </rule>
+    <rule id="31befefa">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>hasown_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="c0a1988">
+        <description>Created after removal of "safer-buffer [![travis][travis-image]][travis-url]
+            [![npm][npm-image]][npm-url] [![javascript style guide][standard-image]][standard-url] [![Security
+            Responsible Disclosure][secuirty-image]][secuirty-url]" from Instancia
+        </description>
+        <accepts>safer-buffer_Readme.html</accepts>
+    </rule>
+    <rule id="5184af9f">
+        <description>Created after removal of "Porting to the Buffer.from/Buffer.alloc API" from Instancia</description>
+        <accepts>Porting-Buffer.html</accepts>
+    </rule>
+    <rule id="7a939f2">
+        <description>Created after removal of "mime-types" from Instancia</description>
+        <accepts>mime-types_README.html</accepts>
+    </rule>
+    <rule id="511b1125">
+        <description>Created after removal of "2.1.35 / 2022-03-12" from Instancia</description>
+        <accepts>mime-types_HISTORY.html</accepts>
+    </rule>
+    <rule id="76a459ce">
+        <description>Created after removal of "type-is" from Instancia</description>
+        <accepts>type-is_README.html</accepts>
+    </rule>
+    <rule id="263dcd27">
+        <description>Created after removal of "1.6.18 / 2019-04-26" from Instancia</description>
+        <accepts>type-is_HISTORY.html</accepts>
+    </rule>
+    <rule id="275ed9a0">
+        <description>Created after removal of "is-property" from Instancia</description>
+        <accepts>is-property_README.html</accepts>
+    </rule>
+    <rule id="59b76400">
+        <description>Created after removal of "has-flag [![Build
+            Status](https://travis-ci.org/sindresorhus/has-flag.svg?branch=master)](https://travis-ci.org/sindresorhus/has-flag)"
+            from Instancia
+        </description>
+        <accepts>has-flag_readme.html</accepts>
+    </rule>
+    <rule id="172ececa">
+        <description>Created after removal of "supports-color [![Build
+            Status](https://travis-ci.org/chalk/supports-color.svg?branch=master)](https://travis-ci.org/chalk/supports-color)"
+            from Instancia
+        </description>
+        <accepts>supports-color_readme.html</accepts>
+    </rule>
+    <rule id="5821f87e">
+        <description>Created after removal of "vary" from Instancia</description>
+        <accepts>vary_README.html</accepts>
+    </rule>
+    <rule id="1209a7f8">
+        <description>Created after removal of "1.1.2 / 2017-09-23" from Instancia</description>
+        <accepts>vary_HISTORY.html</accepts>
+    </rule>
+    <rule id="2ddd90d4">
+        <description>Created after removal of "readdirp [![Weekly
+            downloads](https://img.shields.io/npm/dw/readdirp.svg)](https://github.com/paulmillr/readdirp)" from
+            Instancia
+        </description>
+        <accepts>readdirp_README.html</accepts>
+    </rule>
+    <rule id="3d725a8d">
+        <description>Created after removal of "unpipe" from Instancia</description>
+        <accepts>unpipe_README.html</accepts>
+    </rule>
+    <rule id="13e20c80">
+        <description>Created after removal of "1.0.0 / 2015-06-14" from Instancia</description>
+        <accepts>unpipe_HISTORY.html</accepts>
+    </rule>
+    <rule id="44917211">
+        <description>Created after removal of "brace-expansion" from Instancia</description>
+        <accepts>brace-expansion_README.html</accepts>
+    </rule>
+    <rule id="6ef9afa4">
+        <description>
+            <![CDATA[Created after removal of "fill-range [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/npm/v/fill-range.svg?style=flat)](https://www.npmjs.com/package/fill-range) [![NPM monthly downloads](https://img.shields.io/npm/dm/fill-range.svg?style=flat)](https://npmjs.org/package/fill-range) [![NPM total downloads](https://img.shields.io/npm/dt/fill-range.svg?style=flat)](https://npmjs.org/package/fill-range) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/fill-range.svg?style=flat&label=Travis)](https://travis-ci.org/jonschlinkert/fill-range)" from Instancia]]></description>
+        <accepts>fill-range_README.html</accepts>
+    </rule>
+    <rule id="837ae68">
+        <description>Created after removal of "binary-extensions" from Instancia</description>
+        <accepts>readme.html</accepts>
+    </rule>
+    <rule id="3ab20b8">
+        <description>
+            <![CDATA[Created after removal of "has-symbols <sup>[![Version Badge][2]][1]</sup>" from Instancia]]></description>
+        <accepts>has-symbols_README.html</accepts>
+    </rule>
+    <rule id="68ab9e55">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>has-symbols_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="46bc9dc">
+        <description>Created after removal of "generate-function" from Instancia</description>
+        <accepts>generate-function_README.html</accepts>
+    </rule>
+    <rule id="7d182c3e">
+        <description>Created after removal of "long.js" from Instancia</description>
+        <accepts>long_README.html</accepts>
+    </rule>
+    <rule id="27151ec8">
+        <description>Created after removal of "Security Policies and Procedures" from Instancia</description>
+        <accepts>raw-body_SECURITY.html</accepts>
+    </rule>
+    <rule id="7d3d031b">
+        <description>Created after removal of "raw-body" from Instancia</description>
+        <accepts>raw-body_README.html</accepts>
+    </rule>
+    <rule id="18e51aea">
+        <description>Created after removal of "2.5.2 / 2023-02-21" from Instancia</description>
+        <accepts>raw-body_HISTORY.html</accepts>
+    </rule>
+    <rule id="6215655a">
+        <description>Created after removal of "semver(1) -- The semantic versioner for npm" from Instancia</description>
+        <accepts>semver_README.html</accepts>
+    </rule>
+    <rule id="161c3469">
+        <description>Created after removal of "lru cache" from Instancia</description>
+        <accepts>node_modules_lru-cache_README1.html</accepts>
+    </rule>
+    <rule id="101c1421">
+        <description>Created after removal of "http-errors" from Instancia</description>
+        <accepts>http-errors_README.html</accepts>
+    </rule>
+    <rule id="61d0fefd">
+        <description>Created after removal of "2.0.0 / 2021-12-17" from Instancia</description>
+        <accepts>http-errors_HISTORY.html</accepts>
+    </rule>
+    <rule id="510a6c19">
+        <description>Created after removal of "json Changelog" from Instancia</description>
+        <accepts>CHANGES.html</accepts>
+    </rule>
+    <rule id="1e1d7649">
+        <description>Created after removal of "`json -ga` (g == group, a == array) for streaming mode" from Instancia
+        </description>
+        <accepts>json_README.html</accepts>
+    </rule>
+    <rule id="247e73c9">
+        <description>Created after removal of "minimatch" from Instancia</description>
+        <accepts>minimatch_README.html</accepts>
+    </rule>
+    <rule id="172f009a">
+        <description>Created after removal of "accepts" from Instancia</description>
+        <accepts>accepts_README.html</accepts>
+    </rule>
+    <rule id="7a9ab1ca">
+        <description>Created after removal of "1.3.8 / 2022-02-02" from Instancia</description>
+        <accepts>HISTORY.html</accepts>
+    </rule>
+    <rule id="295f227f">
+        <description>Created after removal of "cookie-signature" from Instancia</description>
+        <accepts>cookie-signature_Readme.html</accepts>
+    </rule>
+    <rule id="22467f83">
+        <description>Created after removal of "1.0.6 / 2015-02-03" from Instancia</description>
+        <accepts>cookie-signature_History.html</accepts>
+    </rule>
+    <rule id="1224969c">
+        <description>Created after removal of "forwarded" from Instancia</description>
+        <accepts>forwarded_README.html</accepts>
+    </rule>
+    <rule id="32ee853e">
+        <description>Created after removal of "0.2.0 / 2021-05-31" from Instancia</description>
+        <accepts>forwarded_HISTORY.html</accepts>
+    </rule>
+    <rule id="24211264">
+        <description>Created after removal of "negotiator" from Instancia</description>
+        <accepts>negotiator_README.html</accepts>
+    </rule>
+    <rule id="28faa7eb">
+        <description>Created after removal of "0.6.3 / 2022-01-22" from Instancia</description>
+        <accepts>negotiator_HISTORY.html</accepts>
+    </rule>
+    <rule id="78903680">
+        <description>Created after removal of "Security Policies and Procedures" from Instancia</description>
+        <accepts>SECURITY.html</accepts>
+    </rule>
+    <rule id="16c28463">
+        <description>Created after removal of "body-parser" from Instancia</description>
+        <accepts>body-parser_README.html</accepts>
+    </rule>
+    <rule id="1175cf1d">
+        <description>Created after removal of "1.20.2 / 2023-02-21" from Instancia</description>
+        <accepts>body-parser_HISTORY.html</accepts>
+    </rule>
+    <rule id="304ec6e9">
+        <description>
+            <![CDATA[Created after removal of "is-number [![NPM version](https://img.shields.io/npm/v/is-number.svg?style=flat)](https://www.npmjs.com/package/is-number) [![NPM monthly downloads](https://img.shields.io/npm/dm/is-number.svg?style=flat)](https://npmjs.org/package/is-number) [![NPM total downloads](https://img.shields.io/npm/dt/is-number.svg?style=flat)](https://npmjs.org/package/is-number) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/is-number.svg?style=flat&label=Travis)](https://travis-ci.org/jonschlinkert/is-number)" from Instancia]]></description>
+        <accepts>is-number_README.html</accepts>
+    </rule>
+    <rule id="af67cd7">
+        <description>Created after removal of "undefsafe" from Instancia</description>
+        <accepts>undefsafe_README.html</accepts>
+    </rule>
+    <rule id="631acbaf">
+        <description>
+            <![CDATA[Created after removal of "simple-update-notifier [![GitHub stars](https://img.shields.io/github/stars/alexbrazier/simple-update-notifier?label=Star%20Project&style=social)](https://github.com/alexbrazier/simple-update-notifier/stargazers)" from Instancia]]></description>
+        <accepts>simple-update-notifier_README.html</accepts>
+    </rule>
+    <rule id="3224a32f">
+        <description>Created after removal of "utils-merge" from Instancia</description>
+        <accepts>utils-merge_README.html</accepts>
+    </rule>
+    <rule id="60444fd5">
+        <description><![CDATA[Created after removal of "<denque_README.md>" from Instancia]]></description>
+        <accepts>denque_README.html</accepts>
+    </rule>
+    <rule id="286ba64c">
+        <description><![CDATA[Created after removal of "<denque_CHANGELOG.md>" from Instancia]]></description>
+        <accepts>denque_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="68036ac5">
+        <description>Created after removal of "side-channel" from Instancia</description>
+        <accepts>side-channel_README.html</accepts>
+    </rule>
+    <rule id="28051f7c">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>side-channel_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="65cd0e52">
+        <description>Created after removal of "contributing to `cors`" from Instancia</description>
+        <accepts>CONTRIBUTING.html</accepts>
+    </rule>
+    <rule id="36193f19">
+        <description>Created after removal of "cors" from Instancia</description>
+        <accepts>cors_README.html</accepts>
+    </rule>
+    <rule id="1a432d80">
+        <description>Created after removal of "2.8.5 / 2018-11-04" from Instancia</description>
+        <accepts>cors_HISTORY.html</accepts>
+    </rule>
+    <rule id="1f100462">
+        <description>
+            <![CDATA[Created after removal of "set-function-length <sup>[![Version Badge][npm-version-svg]][package-url]</sup>" from Instancia]]></description>
+        <accepts>set-function-length_README.html</accepts>
+    </rule>
+    <rule id="2e2c791a">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>set-function-length_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="75f1f7bf">
+        <description>Created after removal of "serve-static" from Instancia</description>
+        <accepts>serve-static_README.html</accepts>
+    </rule>
+    <rule id="7ab680f3">
+        <description>Created after removal of "1.15.0 / 2022-03-24" from Instancia</description>
+        <accepts>serve-static_HISTORY.html</accepts>
+    </rule>
+    <rule id="7a7e1ade">
+        <description>Created after removal of "object-assign [![Build
+            Status](https://travis-ci.org/sindresorhus/object-assign.svg?branch=master)](https://travis-ci.org/sindresorhus/object-assign)"
+            from Instancia
+        </description>
+        <accepts>object-assign_readme.html</accepts>
+    </rule>
+    <rule id="5a79b4d0">
+        <description>Created after removal of "ignore-by-default" from Instancia</description>
+        <accepts>ignore-by-default_README.html</accepts>
+    </rule>
+    <rule id="16beb693">
+        <description>Created after removal of "mime" from Instancia</description>
+        <accepts>mime_README.html</accepts>
+    </rule>
+    <rule id="6a460acd">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>mime_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="1bdba3">
+        <description>Created after removal of "ipaddr.js — an IPv6 and IPv4 address manipulation library [![Build
+            Status](https://travis-ci.org/whitequark/ipaddr.js.svg)](https://travis-ci.org/whitequark/ipaddr.js)" from
+            Instancia
+        </description>
+        <accepts>ipaddr.js_README.html</accepts>
+    </rule>
+    <rule id="4f2b338b">
+        <description>Created after removal of "Security Policies and Procedures" from Instancia</description>
+        <accepts>cookie_SECURITY.html</accepts>
+    </rule>
+    <rule id="298bbc7">
+        <description>Created after removal of "cookie" from Instancia</description>
+        <accepts>cookie_README.html</accepts>
+    </rule>
+    <rule id="5dfe3b0a">
+        <description>Created after removal of "0.6.0 / 2023-11-06" from Instancia</description>
+        <accepts>cookie_HISTORY.html</accepts>
+    </rule>
+    <rule id="7289b3a0">
+        <description>
+            <![CDATA[Created after removal of "to-regex-range [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/npm/v/to-regex-range.svg?style=flat)](https://www.npmjs.com/package/to-regex-range) [![NPM monthly downloads](https://img.shields.io/npm/dm/to-regex-range.svg?style=flat)](https://npmjs.org/package/to-regex-range) [![NPM total downloads](https://img.shields.io/npm/dt/to-regex-range.svg?style=flat)](https://npmjs.org/package/to-regex-range) [![Linux Build Status](https://img.shields.io/travis/micromatch/to-regex-range.svg?style=flat&label=Travis)](https://travis-ci.org/micromatch/to-regex-range)" from Instancia]]></description>
+        <accepts>to-regex-range_README.html</accepts>
+    </rule>
+    <rule id="26c35d4">
+        <description>
+            <![CDATA[Created after removal of "gopd <sup>[![Version Badge][npm-version-svg]][package-url]</sup>" from Instancia]]></description>
+        <accepts>gopd_README.html</accepts>
+    </rule>
+    <rule id="44949607">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>gopd_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="59d7558">
+        <description>Created after removal of "escape-html" from Instancia</description>
+        <accepts>escape-html_Readme.html</accepts>
+    </rule>
+    <rule id="38231af5">
+        <description>Created after removal of "statuses" from Instancia</description>
+        <accepts>statuses_README.html</accepts>
+    </rule>
+    <rule id="55ec8c08">
+        <description>Created after removal of "2.0.1 / 2021-01-03" from Instancia</description>
+        <accepts>statuses_HISTORY.html</accepts>
+    </rule>
+    <rule id="1e2253f7">
+        <description>Created after removal of "yallist" from Instancia</description>
+        <accepts>yallist_README.html</accepts>
+    </rule>
+    <rule id="70c79376">
+        <description>Created after removal of "parseurl" from Instancia</description>
+        <accepts>parseurl_README.html</accepts>
+    </rule>
+    <rule id="24fda02a">
+        <description>Created after removal of "1.3.3 / 2019-04-15" from Instancia</description>
+        <accepts>parseurl_HISTORY.html</accepts>
+    </rule>
+    <rule id="1218843a">
+        <description>Created after removal of "etag" from Instancia</description>
+        <accepts>etag_README.html</accepts>
+    </rule>
+    <rule id="6f5ca43c">
+        <description>Created after removal of "1.8.1 / 2017-09-12" from Instancia</description>
+        <accepts>etag_HISTORY.html</accepts>
+    </rule>
+    <rule id="35982097">
+        <description>Created after removal of "nodemon" from Instancia</description>
+        <accepts>nodemon_README.html</accepts>
+    </rule>
+    <rule id="af25aad">
+        <description>Created after removal of "ms" from Instancia</description>
+        <accepts>node_modules_ms_readme.html</accepts>
+    </rule>
+    <rule id="249d4d0a">
+        <description><![CDATA[Created after removal of "<ms_license.md>" from Instancia]]></description>
+        <accepts>ms_license.html</accepts>
+    </rule>
+    <rule id="345faf18">
+        <description>Created after removal of "debug" from Instancia</description>
+        <accepts>node_modules_debug_README.html</accepts>
+    </rule>
+    <rule id="62786a0d">
+        <description>Created after removal of "Security Policies and Procedures" from Instancia</description>
+        <accepts>send_SECURITY.html</accepts>
+    </rule>
+    <rule id="4d9503a2">
+        <description>Created after removal of "send" from Instancia</description>
+        <accepts>send_README.html</accepts>
+    </rule>
+    <rule id="355cf21f">
+        <description>Created after removal of "0.18.0 / 2022-03-23" from Instancia</description>
+        <accepts>send_HISTORY.html</accepts>
+    </rule>
+    <rule id="2dabaa73">
+        <description>Created after removal of "ms" from Instancia</description>
+        <accepts>node_modules_ms_readme1.html</accepts>
+    </rule>
+    <rule id="1cc2a84a">
+        <description><![CDATA[Created after removal of "<node_modules_ms_license.md>" from Instancia]]></description>
+        <accepts>node_modules_ms_license.html</accepts>
+    </rule>
+    <rule id="66362458">
+        <description>Created after removal of "is-extglob [![NPM
+            version](https://img.shields.io/npm/v/is-extglob.svg?style=flat)](https://www.npmjs.com/package/is-extglob)
+            [![NPM
+            downloads](https://img.shields.io/npm/dm/is-extglob.svg?style=flat)](https://npmjs.org/package/is-extglob)
+            [![Build
+            Status](https://img.shields.io/travis/jonschlinkert/is-extglob.svg?style=flat)](https://travis-ci.org/jonschlinkert/is-extglob)"
+            from Instancia
+        </description>
+        <accepts>is-extglob_README.html</accepts>
+    </rule>
+    <rule id="150e679b">
+        <description>Created after removal of "Security Policies and Procedures" from Instancia</description>
+        <accepts>finalhandler_SECURITY.html</accepts>
+    </rule>
+    <rule id="6e7286d9">
+        <description>Created after removal of "finalhandler" from Instancia</description>
+        <accepts>finalhandler_README.html</accepts>
+    </rule>
+    <rule id="201ce12">
+        <description>Created after removal of "1.2.0 / 2022-03-22" from Instancia</description>
+        <accepts>finalhandler_HISTORY.html</accepts>
+    </rule>
+    <rule id="4a67b040">
+        <description>
+            <![CDATA[Created after removal of "braces [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/npm/v/braces.svg?style=flat)](https://www.npmjs.com/package/braces) [![NPM monthly downloads](https://img.shields.io/npm/dm/braces.svg?style=flat)](https://npmjs.org/package/braces) [![NPM total downloads](https://img.shields.io/npm/dt/braces.svg?style=flat)](https://npmjs.org/package/braces) [![Linux Build Status](https://img.shields.io/travis/micromatch/braces.svg?style=flat&label=Travis)](https://travis-ci.org/micromatch/braces)" from Instancia]]></description>
+        <accepts>braces_README.html</accepts>
+    </rule>
+    <rule id="9eb0e09">
+        <description>Created after removal of "Release history" from Instancia</description>
+        <accepts>CHANGELOG.html</accepts>
+    </rule>
+    <rule id="30b54c60">
+        <description>Created after removal of "Changelog" from Instancia</description>
+        <accepts>object-inspect_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="5f685665">
+        <description>Created after removal of "on-finished" from Instancia</description>
+        <accepts>on-finished_README.html</accepts>
+    </rule>
+    <rule id="184dfb9">
+        <description>Created after removal of "2.4.1 / 2022-02-22" from Instancia</description>
+        <accepts>on-finished_HISTORY.html</accepts>
+    </rule>
+    <rule id="3af254ab">
+        <description>
+            <![CDATA[Created after removal of "normalize-path [![NPM version](https://img.shields.io/npm/v/normalize-path.svg?style=flat)](https://www.npmjs.com/package/normalize-path) [![NPM monthly downloads](https://img.shields.io/npm/dm/normalize-path.svg?style=flat)](https://npmjs.org/package/normalize-path) [![NPM total downloads](https://img.shields.io/npm/dt/normalize-path.svg?style=flat)](https://npmjs.org/package/normalize-path) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/normalize-path.svg?style=flat&label=Travis)](https://travis-ci.org/jonschlinkert/normalize-path)" from Instancia]]></description>
+        <accepts>normalize-path_README.html</accepts>
+    </rule>
+    <rule id="4c684b7a">
+        <description>Created after removal of "fsevents" from Instancia</description>
+        <accepts>fsevents_README.html</accepts>
+    </rule>
+    <rule id="3aa91f07">
+        <description>Created after removal of "if Array is one of the types, then it can take many" from Instancia
+        </description>
+        <accepts>nopt_README.html</accepts>
+    </rule>
+    <rule id="7734bba2">
+        <description>Created after removal of "debug" from Instancia</description>
+        <accepts>debug_README.html</accepts>
+    </rule>
+    <rule id="5ff634d5">
+        <description>Created after removal of "2.6.9 / 2017-09-22" from Instancia</description>
+        <accepts>debug_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="6795b25a">
+        <description>Created after removal of "glob-parent" from Instancia</description>
+        <accepts>glob-parent_README.html</accepts>
+    </rule>
+    <rule id="3cbd8b0b">
+        <description><![CDATA[Created after removal of "<glob-parent_CHANGELOG.md>" from Instancia]]></description>
+        <accepts>glob-parent_CHANGELOG.html</accepts>
+    </rule>
+    <rule id="52a1db6b">
+        <description>Created after removal of "media-typer" from Instancia</description>
+        <accepts>media-typer_README.html</accepts>
+    </rule>
+    <rule id="654ddd1e">
+        <description>Created after removal of "0.3.0 / 2014-09-07" from Instancia</description>
+        <accepts>media-typer_HISTORY.html</accepts>
+    </rule>
+    <rule id="3f8f9205">
+        <description>Created after removal of "mime-db" from Instancia</description>
+        <accepts>mime-db_README.html</accepts>
+    </rule>
+    <rule id="35fd27ad">
+        <description>Created after removal of "1.52.0 / 2022-02-21" from Instancia</description>
+        <accepts>mime-db_HISTORY.html</accepts>
+    </rule>
+    <rule id="6dddaa03">
+        <description>Created after removal of "Polyfill for `Object.setPrototypeOf`" from Instancia</description>
+        <accepts>setprototypeof_README.html</accepts>
+    </rule>
+    <rule id="5ba518b9">
+        <description>Created after removal of "Empty XML Topic" from Instancia</description>
+        <accepts>Empty-XML-Topic.html</accepts>
+    </rule>
+    <rule id="1e5681c1">
+        <description>Created after removal of "API Reference" from Instancia</description>
+        <accepts>API_Reference.html</accepts>
+    </rule>
+    <rule id="56a56f21">
+        <description>Created after removal of "Tutorial" from Instancia</description>
+        <accepts>Tutorial.html</accepts>
+    </rule>
+    <rule id="2425bb1d">
+        <description>Created after removal of "How to" from Instancia</description>
+        <accepts>How-to.html</accepts>
+    </rule>
+    <rule id="4c140976">
+        <description>Created after removal of "Schemas" from Instancia</description>
+        <accepts>Schemas.html</accepts>
+    </rule>
+    <rule id="1f6dae4">
+        <description>Created after removal of "API Reference" from Instancia</description>
+        <accepts>API_Reference.html</accepts>
+    </rule>
+    <rule id="43c86c96">
+        <description>Created after removal of "Schemas" from Instancia</description>
+        <accepts>Schemas.html</accepts>
+    </rule>
+    <rule id="75abf42">
+        <description>Created after removal of "/cathingory GET" from Instancia</description>
+        <accepts>cathingory_GET.html</accepts>
+    </rule>
+    <rule id="2baad4c">
+        <description>Created after removal of "API Reference" from Instancia</description>
+        <accepts>API_Reference.html</accepts>
+    </rule>
+</rules>
