@@ -4,39 +4,58 @@ import Router from "express";
 const router = Router()
 
 router.get("/api/thingos/:page/:id", async (req, res) => {
-    const main = {};
-    const [info] = await pool.query("SELECT pv.thingo_id, th.name AS nombre_thingo, cat.name AS nombre_categoria, cat.image AS imagen_categoria_thingo, other.apodo AS nombre_de_quien_lo_ha_hecho\n" +
-        "FROM pivot_thingos_perfil AS pv\n" +
-        "JOIN thingos AS th ON pv.thingo_id = th.id\n" +
-        "JOIN cathingory AS cat ON th.cathingory_id = cat.id\n" +
-        "JOIN profile AS other ON pv.profile_id = other.id;");
+        const main = {};
 
+        // Obtener el número de página
+        const pagina = parseInt(req.params.page);
 
-    let lista = [1, 2, 3, 4];
-    let conteo = lista.length;
+        // Obtener el total de registros
+        const [info] = await pool.query(`SELECT COUNT(*) as total FROM pivot_thingos_perfil AS pv 
+            JOIN thingos AS th ON pv.thingo_id = th.id
+            JOIN cathingory AS cat ON th.cathingory_id = cat.id
+            JOIN profile AS other ON pv.profile_id = other.id;`);
 
-    const pagina = parseInt(req.params.page);
+        const totalItems = info[0].total;
+        const itemsPorPagina = 10;
+        const offset = (pagina - 1) * itemsPorPagina;
 
-    const [results] = await pool.query("SELECT pv.thingo_id, th.name AS nombre_thingo, cat.name AS nombre_categoria, cat.image AS imagen_categoria_thingo, other.apodo AS hecho FROM pivot_thingos_perfil as pv \n" +
-        "        JOIN thingos AS th ON pv.thingo_id = th.id\n" +
-        "        JOIN cathingory AS cat ON th.cathingory_id = cat.id\n" +
-        "        JOIN profile AS other ON pv.profile_id = other.id\n" +
-        "        JOIN pivot_thingos_perfil AS pivo ON pv.profile_id = pivo.id\n" +
-        `        WHERE 1 LIMIT 10 OFFSET ${(pagina - 1) * 10}`);
-    res.json({
-        info,
-        results
-    });
-    return
+        // Obtener los registros
+        const [results] = await pool.query(`
+            SELECT pv.thingo_id, th.name AS nombre_thingo, cat.name AS nombre_categoria, cat.image AS imagen_categoria_thingo, other.apodo AS hecho
+            FROM pivot_thingos_perfil as pv 
+            JOIN thingos AS th ON pv.thingo_id = th.id
+            JOIN cathingory AS cat ON th.cathingory_id = cat.id
+            JOIN profile AS other ON pv.profile_id = other.id
+            WHERE 1
+            LIMIT ? OFFSET ?
+        `, [itemsPorPagina, offset]);
 
-    main.info = {
-        count: info.length,
-        pages: info.length / 10,
-        next: "",
-        prev: null
-    };
+        // Calculo del número total de páginas
+        let pageCount;
+        if (totalItems === 0) {
+            pageCount = 1;
+        } else {
+            const pages = totalItems / itemsPorPagina;
+            if (pages % 1 === 0) {
+                pageCount = pages;
+            } else {
+                pageCount = (pages - (pages % 1)) + 1; // Redondeo
+            }
+        }
 
-    main.results = results;
+        const siguentePagina = pagina < pageCount ? pagina + 1 : null;
+        const prevPage = pagina > 1 ? pagina - 1 : null;
+
+        main.info = {
+            count: totalItems,
+            pages: pageCount,
+            next: siguentePagina,
+            prev: prevPage
+        };
+
+        main.results = results;
+
+        res.json(main);
 });
 
 router.get("/api/thingos/:name", async (req, res) => {
