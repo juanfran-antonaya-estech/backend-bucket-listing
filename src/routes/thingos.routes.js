@@ -39,4 +39,17 @@ router.get("/api/thingos/:page/:id", async (req, res) => {
     main.results = results;
 });
 
+router.get("/api/thingos/:name", async (req, res) => {
+
+    const nombre = req.params.name
+
+    const [results] = await pool.query("SELECT th.id, th.name AS nombre_thingo, cat.name AS nombre_categoria, cat.image AS imagen_categoria FROM thingos AS th\n" +
+        "JOIN cathingory AS cat ON th.cathingory_id = cat.id\n" +
+        `WHERE LOWER(th.name) LIKE CONCAT('%', '${nombre}', '%');`)
+    console.log(nombre)
+
+    res.json(results)
+
+})
+
 export default router
