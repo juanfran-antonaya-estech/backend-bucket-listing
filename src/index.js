@@ -7,6 +7,7 @@ import loginRoutes from "./routes/login.routes.js";
 import suggestionsRoutes from "./routes/suggestions.routes.js";
 import thingosRoutes from "./routes/thingos.routes.js";
 import trendingRoutes from "./routes/trending.routes.js";
+import reactionsRoutes from "./routes/reactions.routes.js";
 
 const app = express()
 
@@ -19,5 +20,6 @@ app.use(loginRoutes)
 app.use(suggestionsRoutes)
 app.use(thingosRoutes)
 app.use(trendingRoutes)
+app.use(reactionsRoutes)
 
 app.listen(3000)
