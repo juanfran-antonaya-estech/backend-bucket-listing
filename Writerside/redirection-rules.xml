@@ -844,4 +844,80 @@
         <description>Created after removal of "API Reference" from Instancia</description>
         <accepts>API_Reference.html</accepts>
     </rule>
+    <rule id="5d33052f">
+        <description>Created after removal of "Documentación API de bucket listing" from Instancia</description>
+        <accepts>README.html</accepts>
+    </rule>
+    <rule id="be31584">
+        <description>Created after removal of "Listar todas las cathingorias disponibles" from Instancia</description>
+        <accepts>Listar_todas_las_cathingorias_disponibles.html</accepts>
+    </rule>
+    <rule id="6bdceeda">
+        <description>Created after removal of "API Reference" from Instancia</description>
+        <accepts>API_Reference.html</accepts>
+    </rule>
+    <rule id="73d42202">
+        <description>Created after removal of "API Reference" from Instancia</description>
+        <accepts>API_Reference.html</accepts>
+    </rule>
+    <rule id="4da6f6cc">
+        <description>Created after removal of "Schemas" from Instancia</description>
+        <accepts>Schemas.html</accepts>
+    </rule>
+    <rule id="201f2838">
+        <description>Created after removal of "GET api/perfil/{id}" from Instancia</description>
+        <accepts>GET_api_perfil_id_.html</accepts>
+    </rule>
+    <rule id="a65ecf0">
+        <description>Created after removal of "POST api/perfil" from Instancia</description>
+        <accepts>POST_api_perfil.html</accepts>
+    </rule>
+    <rule id="60518a2c">
+        <description>Created after removal of "GET api/perfil" from Instancia</description>
+        <accepts>GET_api_perfil.html</accepts>
+    </rule>
+    <rule id="36104789">
+        <description>Created after removal of "GET api/suggestions/sugerenciasthingos" from Instancia</description>
+        <accepts>GET_api_suggestions_sugerenciasthingos.html</accepts>
+    </rule>
+    <rule id="33a6c804">
+        <description>Created after removal of "GET api/suggestions/friendsuggestions" from Instancia</description>
+        <accepts>GET_api_suggestions_friendsuggestions.html</accepts>
+    </rule>
+    <rule id="a448ed2">
+        <description>Created after removal of "GET api/trending" from Instancia</description>
+        <accepts>GET_api_trending.html</accepts>
+    </rule>
+    <rule id="6818e461">
+        <description>Created after removal of "POST api/register" from Instancia</description>
+        <accepts>POST_api_register.html</accepts>
+    </rule>
+    <rule id="f929a5b">
+        <description>Created after removal of "POST api/login" from Instancia</description>
+        <accepts>POST_api_login.html</accepts>
+    </rule>
+    <rule id="2305222c">
+        <description>Created after removal of "GET api/cathingory/{name}" from Instancia</description>
+        <accepts>GET_api_cathingory_name_.html</accepts>
+    </rule>
+    <rule id="59e5b3a8">
+        <description>Created after removal of "GET api/cathingory" from Instancia</description>
+        <accepts>GET_api_cathingory.html</accepts>
+    </rule>
+    <rule id="4074b881">
+        <description>Created after removal of "GET api/thingos/{page}/{id}" from Instancia</description>
+        <accepts>GET_api_thingos_page_id_.html</accepts>
+    </rule>
+    <rule id="6d5853ed">
+        <description>Created after removal of "GET api/thingos/{name}" from Instancia</description>
+        <accepts>GET_api_thingos_name_.html</accepts>
+    </rule>
+    <rule id="1a84e764">
+        <description>Created after removal of "GET api/feed/{page}" from Instancia</description>
+        <accepts>GET_api_feed_page_.html</accepts>
+    </rule>
+    <rule id="7457eef6">
+        <description>Created after removal of "API Reference" from Instancia</description>
+        <accepts>API_Reference.html</accepts>
+    </rule>
 </rules>

@@ -3,11 +3,6 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="i"
-                 name="Instancia" start-page="README.md">
+                  name="Instancia">
 
-    <toc-element topic="README.md">
-    </toc-element>
-    <toc-element topic="API_Reference.topic">
-        <toc-element topic="Listar_todas_las_cathingorias_disponibles.topic"/>
-    </toc-element>
 </instance-profile>
