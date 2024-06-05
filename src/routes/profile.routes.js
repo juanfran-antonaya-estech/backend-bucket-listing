@@ -118,7 +118,7 @@ router.get("/api/perfil/:id", async(req, res) => {
     followers.forEach( follower => {
         for (let i = 0; i < follows.length; i++) {
             const followed = follows[i]
-            if (follower.id = followed.id) {
+            if (follower.id == followed.id) {
                 mutuals.push(follower)
                 break
             }
