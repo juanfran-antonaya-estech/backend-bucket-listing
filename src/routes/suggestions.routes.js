@@ -72,11 +72,14 @@ router.get("/api/suggestions/friendsuggestions", async (req,res) => {
     otrosmutuals.map(otromutual => {
         function checkifexists() {
             let exists = false
-            mutuals.forEach(mutual => {
+            for (let i = 0; i < mutuals.length; i++) {
+                const mutual = mutuals[i]
+
                 if(mutual.id == otromutual.id) {
                     exists = true
+                    break
                 }
-            })
+            }
 
             return exists;
         }
