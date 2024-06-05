@@ -73,4 +73,22 @@ router.get("/api/thingos/:name", async (req, res) => {
 
 })
 
+router.post("/api/thingos/", async (req, res) =>{
+    const { name, cathingory_id } = req.body;
+
+    try {
+        // Insertar nuevo thingo
+        const [insertResult] = await pool.query(
+            "INSERT INTO thingos (name, cathingory_id) VALUES (?, ?)",
+            [name, cathingory_id]
+        );
+
+        const newThingoId = insertResult.insertId;
+
+        res.status(201).json({ message: "Creado correctamente", newThingoId });
+    } catch (error) {
+        res.status(500).json({ message: "Error al crear el thingo, no me vale eso", error });
+    }
+});
+
 export default router
