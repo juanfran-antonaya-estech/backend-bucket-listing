@@ -26,12 +26,14 @@ router.get("/api/suggestions/friendsuggestions", async (req,res) => {
         `WHERE fwpv.following_user_id = ${user}`)
 
     const mutuals = []
-    followers.map( follower => {
-        follows.map( followed => {
+    followers.forEach( follower => {
+        for (let i = 0; i < follows.length; i++) {
+            const followed = follows[i]
             if (follower.id = followed.id) {
                 mutuals.push(follower)
+                break
             }
-        })
+        }
     })
 
     const otrosmutuals = []
@@ -45,12 +47,14 @@ router.get("/api/suggestions/friendsuggestions", async (req,res) => {
             "JOIN follows AS fwpv ON fwers.id = fwpv.followed_user_id\n" +
             `WHERE fwpv.following_user_id = ${mutual.id}`)
 
-        otrosfollowers.map( follower => {
-            otrosfollows.map( followed => {
+        otrosfollowers.forEach( follower => {
+            for (let i = 0; i < otrosfollows.length; i++) {
+                const followed = otrosfollows[i]
                 if (follower.id = followed.id) {
-                    otrosmutuals.push(follower)
+                    mutuals.push(follower)
+                    break
                 }
-            })
+            }
         })
     }
 
