@@ -38,30 +38,40 @@ router.get("/api/suggestions/friendsuggestions", async (req,res) => {
 
     const otrosmutuals = []
 
+    let contador = 0
+
     for (const mutual of mutuals) {
-        const [otrosfollowers] = await pool.query("SELECT fwers.id, fwers.apodo, fwers.profile_photo FROM profile AS fwers\n" +
+        const [otrosfollowers] = await pool.query("SELECT fwers.id, fwpv.id AS 'id_sumutual', fwers.apodo, fwers.profile_photo FROM profile AS fwers\n" +
             "JOIN follows AS fwpv ON fwers.id = fwpv.following_user_id\n" +
             `WHERE fwpv.followed_user_id = ${mutual.id}`)
 
-        const [otrosfollows] = await pool.query("SELECT fwers.id, fwers.apodo, fwers.profile_photo FROM profile AS fwers\n" +
+        const [otrosfollows] = await pool.query("SELECT fwers.id, fwpv.id AS 'id_sumutual', fwers.apodo, fwers.profile_photo FROM profile AS fwers\n" +
             "JOIN follows AS fwpv ON fwers.id = fwpv.followed_user_id\n" +
             `WHERE fwpv.following_user_id = ${mutual.id}`)
+
+
 
         otrosfollowers.forEach( follower => {
             for (let i = 0; i < otrosfollows.length; i++) {
                 const followed = otrosfollows[i]
                 if (follower.id = followed.id) {
-                    mutuals.push(follower)
+                    otrosmutuals.push(follower)
                     break
                 }
             }
         })
+
+        if(contador > 100){
+            break
+        } else {
+            contador++
+        }
     }
+
 
     otrosmutuals.map(otromutual => {
         function checkifexists() {
             let exists = false
-
             mutuals.forEach(mutual => {
                 if(mutual.id == otromutual.id) {
                     exists = true
@@ -79,8 +89,8 @@ router.get("/api/suggestions/friendsuggestions", async (req,res) => {
             otromutual.relacion = "ninguna"
         }
     })
-
     res.status(200).json(otrosmutuals)
+    return
 })
 
 router.get("/api/suggestions/sugerenciasthingos", async (req, res) => {
