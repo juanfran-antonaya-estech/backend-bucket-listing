@@ -58,12 +58,14 @@ router.get("/api/perfil", async(req, res) => {
     main.seguidos = follows.length
 
     const mutuals = []
-    followers.map( follower => {
-        follows.map( followed => {
+    followers.forEach( follower => {
+        for (let i = 0; i < follows.length; i++) {
+            const followed = follows[i]
             if (follower.id = followed.id) {
                 mutuals.push(follower)
+                break
             }
-        })
+        }
     })
 
     main.mutuals = mutuals
@@ -113,12 +115,14 @@ router.get("/api/perfil/:id", async(req, res) => {
     main.seguidos = follows.length
 
     const mutuals = []
-    followers.map( follower => {
-        follows.map( followed => {
+    followers.forEach( follower => {
+        for (let i = 0; i < follows.length; i++) {
+            const followed = follows[i]
             if (follower.id = followed.id) {
                 mutuals.push(follower)
+                break
             }
-        })
+        }
     })
 
     main.mutuals = mutuals
