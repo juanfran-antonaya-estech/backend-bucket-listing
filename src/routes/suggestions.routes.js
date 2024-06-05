@@ -80,7 +80,7 @@ router.get("/api/suggestions/friendsuggestions", async (req,res) => {
         }
     })
 
-    res.json(otrosmutuals)
+    res.status(200).json(otrosmutuals)
 })
 
 router.get("/api/suggestions/sugerenciasthingos", async (req, res) => {
@@ -89,7 +89,7 @@ router.get("/api/suggestions/sugerenciasthingos", async (req, res) => {
         "JOIN cathingory AS cat ON th.cathingory_id = cat.id\n" +
         "JOIN profile AS other ON pv.profile_id = other.id\n" +
         "GROUP BY th.id;")
-    res.json(sugerenciasthingos)
+    res.status(200).json(sugerenciasthingos)
 })
 
 export default router
