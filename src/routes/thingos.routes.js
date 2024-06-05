@@ -13,7 +13,9 @@ router.get("/api/thingos/:page/:id", async (req, res) => {
         const [info] = await pool.query(`SELECT COUNT(*) as total FROM pivot_thingos_perfil AS pv 
             JOIN thingos AS th ON pv.thingo_id = th.id
             JOIN cathingory AS cat ON th.cathingory_id = cat.id
-            JOIN profile AS other ON pv.profile_id = other.id;`);
+            JOIN profile AS other ON pv.profile_id = other.id
+                                         WHERE pv.thingo_id = ?
+;`, [req.params.id]);
 
         const totalItems = info[0].total;
         const itemsPorPagina = 10;
@@ -26,9 +28,9 @@ router.get("/api/thingos/:page/:id", async (req, res) => {
             JOIN thingos AS th ON pv.thingo_id = th.id
             JOIN cathingory AS cat ON th.cathingory_id = cat.id
             JOIN profile AS other ON pv.profile_id = other.id
-            WHERE 1
+            WHERE pv.thingo_id = ?
             LIMIT ? OFFSET ?
-        `, [itemsPorPagina, offset]);
+        `, [req.params.id,itemsPorPagina, offset]);
 
         // Calculo del número total de páginas
         let pageCount;
